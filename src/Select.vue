@@ -413,7 +413,7 @@ onBeforeUnmount(() => {
           v-model="search"
           class="search-input"
           type="text"
-          @input="event => search = event.target.value"
+          @input="event => search = (event.target as HTMLInputElement).value"
           aria-autocomplete="list"
           autocapitalize="none"
           autocomplete="off"
